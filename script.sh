@@ -4,7 +4,7 @@ while true; do
 		echo $(date) >> firemark
 		git add firemark
 		git commit -am "$(shuf -n 1 commits)"
-		sleep 60
+		sleep $[$RANDOM % 240 + 120]
 	done
 	git push origin master
 done
